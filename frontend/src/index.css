@@ -1,0 +1,25 @@
+/* -----------------------------------------------------------------
+File: frontend/src/index.css
+Purpose: Tailwind base + small theme utilities
+----------------------------------------------------------------- */
+
+/* Import fonts first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+/* Scale everything down to 90% */
+html {
+  font-size: 95%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Cognifer base styles */
+body {
+  @apply bg-background text-text font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading text-primary;
+}

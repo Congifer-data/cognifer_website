@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+.env.*
+
+
+# Node / frontend
+/node_modules
+/.next
+/build
+.DS_Store
+
+
+# Editors
+.vscode/
+.idea/
+
+
+# Logs
+npm-debug.log*
+nohup.out
+
+
+# OS
+.DS_Store
+Thumbs.db
