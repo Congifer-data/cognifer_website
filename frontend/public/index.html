@@ -1,12 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+    Cognifer — Authentic + Classy
+    Root Vite entry HTML (updated for SEO, OG, structured data)
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cognifer | AI Powered Analytics</title>
+
+    <!-- Primary metadata -->
+    <title>Cognifer — Dashboards, Web & Mobile Apps · SACCO Analytics (coming soon)</title>
+    <meta name="description" content="Cognifer delivers dashboards, web & mobile apps, and website development for fintech and SACCOs across Africa. SACCO Analytics (coming soon) provides explainable AI for loan portfolios and member insights." />
+    <link rel="canonical" href="https://www.cognifer.co.ke/" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cognifer — Dashboards, Web & Mobile Apps · SACCO Analytics (coming soon)" />
+    <meta property="og:description" content="Dashboards, web & mobile app development, and websites for fintech and SACCOs. SACCO Analytics is coming soon — book a demo." />
+    <meta property="og:url" content="https://www.cognifer.co.ke/" />
+    <meta property="og:image" content="https://www.cognifer.co.ke/assets/sacco_analytics-C6APvec8.webp" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cognifer — Dashboards, Web & Mobile Apps · SACCO Analytics (coming soon)" />
+    <meta name="twitter:description" content="Dashboards, web & mobile app development, website development and SACCO analytics for financial institutions." />
+    <meta name="twitter:image" content="https://www.cognifer.co.ke/assets/sacco_analytics-C6APvec8.webp" />
+
+    <!-- SEO helpers -->
+    <meta name="robots" content="index,follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Structured data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Cognifer",
+      "url":"https://www.cognifer.co.ke",
+      "logo":"https://www.cognifer.co.ke/assets/logo-Dh_nVbgP.webp",
+      "sameAs": [
+        "https://www.linkedin.com/your-company",
+        "https://twitter.com/yourhandle"
+      ],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+254-7XX-XXX-XXX",
+        "contactType": "customer service",
+        "areaServed": "KE"
+      }]
+    }
+    </script>
+
+    <!-- Structured data: WebApplication + Features -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebApplication",
+      "name":"Cognifer",
+      "url":"https://www.cognifer.co.ke",
+      "description":"Dashboards, web & mobile apps, and website development for fintech and SACCOs. SACCO Analytics (coming soon) will provide explainable AI insights for loan portfolios and members.",
+      "applicationCategory":"FinanceApplication",
+      "operatingSystem":"Web",
+      "screenshot":[
+        "https://www.cognifer.co.ke/assets/sacco_analytics-C6APvec8.webp"
+      ],
+      "featureList":[
+        "Custom dashboards & analytics",
+        "Web & mobile application development",
+        "Website development",
+        "SACCO Analytics — coming soon (loan risk, member insights)"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.cognifer.co.ke/contact",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <!-- optional: link to sitemap/robots on root (useful if you host them) -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   </head>
-  <body>
+
+  <body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Root Mount -->
     <div id="root"></div>
+
+    <!-- Vite Entry -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
