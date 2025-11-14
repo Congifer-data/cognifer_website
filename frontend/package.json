@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "compress:images": "node scripts/compress-images.js",
+    "generate:sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "axios": "^1.6.8",
@@ -22,10 +24,16 @@
     "recharts": "^3.3.0"
   },
   "devDependencies": {
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
+    "mkdirp": "^3.0.1",
     "postcss": "^8.4.35",
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.3",
-    "vite": "^5.2.10"
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2",
+    "vite-imagetools": "^9.0.0"
   }
 }
