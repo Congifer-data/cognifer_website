@@ -1,28 +1,92 @@
+# =================================================================
+# .gitignore — Cognifer monorepo (FastAPI backend + React frontend)
+# =================================================================
+
+
+# -----------------------------------------------------------------
 # Python
+# -----------------------------------------------------------------
 __pycache__/
-*.pyc
+*.py[cod]           # compiled bytecode (.pyc, .pyo, .pyd)
+*.pyo
+
+# Virtual environments
 venv/
+.venv/
+env/
+ENV/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# pytest cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy / type-checker caches
+.mypy_cache/
+.dmypy.json
+
+
+# -----------------------------------------------------------------
+# Environment variables — NEVER commit real secrets
+# -----------------------------------------------------------------
 .env
 .env.*
+!.env.example       # the example template IS safe to commit
 
 
+# -----------------------------------------------------------------
 # Node / frontend
-/node_modules
-/.next
-/build
-.DS_Store
+# -----------------------------------------------------------------
+
+# Dependency folders — applies at any depth in the repo tree
+# (fixes the original /node_modules which only matched the root)
+**/node_modules/
+
+# Vite build output (generated — no need to version)
+frontend/dist/
+frontend/build/
+
+# Next.js (if ever added)
+.next/
+out/
+
+# npm / yarn debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Parcel cache
+.cache/
+.parcel-cache/
 
 
-# Editors
+# -----------------------------------------------------------------
+# Editors & IDEs
+# -----------------------------------------------------------------
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
 
-# Logs
-npm-debug.log*
-nohup.out
-
-
-# OS
+# -----------------------------------------------------------------
+# Operating system
+# -----------------------------------------------------------------
 .DS_Store
 Thumbs.db
+desktop.ini
+
+
+# -----------------------------------------------------------------
+# Logs
+# -----------------------------------------------------------------
+*.log
+nohup.out
+logs/
