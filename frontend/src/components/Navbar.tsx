@@ -14,6 +14,7 @@ TypeScript-safe: explicit types for product list, refs, handlers to avoid `unkno
 import React, { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.webp";
 
@@ -174,16 +175,23 @@ const Navbar: React.FC = () => {
             About
           </NavLink>
 
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive
-                ? "text-cognifer_blue font-semibold"
-                : "text-gray-800 hover:text-cognifer_blue transition"
-            }
-          >
-            Contact
-          </NavLink>
+          <div className="flex items-center gap-2">
+            <a
+              href="tel:+254718688455"
+              className="text-gray-800 hover:text-cognifer_blue transition"
+            >
+              0718688455
+            </a>
+            <a
+              href="https://wa.me/254718688455"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-800 hover:text-cognifer_blue transition"
+              aria-label="Chat on WhatsApp"
+            >
+              <IoLogoWhatsapp size={16} />
+            </a>
+          </div>
 
           {/* CTA BUTTON */}
           <Link
@@ -260,13 +268,23 @@ const Navbar: React.FC = () => {
                 About
               </NavLink>
 
-              <NavLink
-                to="/contact"
-                onClick={() => setMobileOpen(false)}
-                className="text-gray-800 hover:text-cognifer_blue"
-              >
-                Contact
-              </NavLink>
+              <div className="flex items-center gap-2">
+                <a
+                  href="tel:+254718688455"
+                  className="text-gray-800 hover:text-cognifer_blue"
+                >
+                  0718688455
+                </a>
+                <a
+                  href="https://wa.me/254718688455"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-800 hover:text-cognifer_blue"
+                  aria-label="Chat on WhatsApp"
+                >
+                  <IoLogoWhatsapp size={16} />
+                </a>
+              </div>
 
               <Link
                 to="/contact"
